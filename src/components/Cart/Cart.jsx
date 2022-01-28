@@ -13,7 +13,9 @@ function Cart(props) {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
         impedit maiores modi vel.
       </p>
-      <button>Add to cart</button>
+      <button onClick={() => {
+        props.update(props.price)
+      }}>Add to cart</button>
     </div>
   );
 }
