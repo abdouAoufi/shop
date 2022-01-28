@@ -1,13 +1,13 @@
 import iphone from "../../images/iphone.jpeg";
 import "./root.css";
 
-function Cart() {
+function Cart(props) {
   return (
     <div className="product">
-      <img src={iphone} alt="" />
+      <img src={props.image} alt="" />
       <div>
-        <h3>Product title</h3>
-        <p>1200$</p>
+        <h3>{props.name}</h3>
+        <p>{props.price}</p>
       </div>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
