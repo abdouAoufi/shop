@@ -1,0 +1,20 @@
+nav {
+  padding: .5rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.inner-container h3 {
+  color: #c4c4c4;
+  font-weight: bold;
+}
+
+.inner-container p {
+  color: rgb(59, 143, 115);
+  font-size: x-large;
+  font-weight: bolder;
+}
