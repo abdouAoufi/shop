@@ -1,0 +1,49 @@
+{
+  "list": [
+    {
+      "name": "Iphone 13 pro",
+      "price": 1100,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Iphone 12 pro",
+      "price": 1000,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Galaxy s10",
+      "price": 800,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "mac book pro 2014",
+      "price": 1100,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "DELL I5",
+      "price": 1000,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Galaxy s20",
+      "price": 800,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Iphone 13 pro",
+      "price": 1100,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Iphone x pro",
+      "price": 1000,
+      "image": "../../images/iphone.jpeg"
+    },
+    {
+      "name": "Galaxy note 20",
+      "price": 800,
+      "image": "../../images/iphone.jpeg"
+    }
+  ]
+}
