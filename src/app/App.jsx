@@ -1,16 +1,22 @@
 import Navbar from "../components/Navbar/Navbar";
 import Cart from "../components/Cart/Cart";
 import data from "../constants/data.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const listProducts = data.list;
+  const [listProducts, setListProduct] = useState([]);
   const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setListProduct(data.list);
+    }, 3000);
+  }, []);
+
   const updateTotal = (price) => {
-    setTotal(total + price)
+    setTotal(total + price);
   };
- 
+
   return (
     <div>
       <Navbar totalPrice={total} />
@@ -22,11 +28,20 @@ function App() {
           marginTop: "3rem",
         }}
       >
-        {listProducts.map((item) => {
-          return (
-            <Cart update={updateTotal} name={item.name} price={item.price} image={item.image} />
-          );
-        })}
+        {listProducts.length === 0 ? (
+          <div> loading ...... </div>
+        ) : (
+          listProducts.map((item) => {
+            return (
+              <Cart
+                update={updateTotal}
+                name={item.name}
+                price={item.price}
+                image={item.image}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );

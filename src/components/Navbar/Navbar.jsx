@@ -1,7 +1,6 @@
 import "./root.css"
 
 function Navbar(props) {
-  console.log(props)
   return (
     <nav>
       <div className="inner-container">
