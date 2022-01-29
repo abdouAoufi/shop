@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import Cart from "../components/Cart/Cart";
+import Signup from "../components/Signup/Signp"
 import { useState, useEffect } from "react";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <div>
-      <Navbar totalPrice={total} />
+      <Navbar totalPrice={total} />  
+      <Signup/>
       <div
         style={{
           display: "flex",
@@ -45,7 +47,7 @@ function App() {
             );
           })
         )}
-      </div>
+      </div>  
     </div>
   );
 }
