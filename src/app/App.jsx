@@ -3,6 +3,7 @@ import Cart from "../components/Cart/Cart";
 import Signup from "../components/Signup/Signp"
 import { useState, useEffect } from "react";
 
+
 function App() {
   const [listProducts, setListProduct] = useState([]);
   const [total, setTotal] = useState(0);
@@ -24,7 +25,6 @@ function App() {
   return (
     <div>
       <Navbar totalPrice={total} />  
-      <Signup/>
       <div
         style={{
           display: "flex",
