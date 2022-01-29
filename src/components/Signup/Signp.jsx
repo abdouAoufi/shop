@@ -4,24 +4,24 @@ import { useState } from "react";
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [response, setResponse] = useState("");
 
   const processData = () => {
     const payload = {
       email: email,
-      password: password,
+      password,
     };
 
     fetch("http://192.168.1.34:1337/signup", {
       method: "POST",
-      body: JSON.stringify(payload),
-      // Adding headers to the request
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
+      body: JSON.stringify(payload),
     })
       .then((response) => {
         response.json().then((data) => {
-          console.log(data);
+          setResponse(data.message)
         });
       })
       .catch((err) => {
@@ -56,6 +56,9 @@ function Signup() {
         >
           Signup
         </button>
+      </div>
+      <div>
+        <p style={{ textAlign: "center" }}>{response}</p>
       </div>
     </div>
   );
