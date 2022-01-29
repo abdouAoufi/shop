@@ -1,4 +1,4 @@
-import iphone from "../../images/iphone.jpeg";
+
 import "./root.css";
 
 function Cart(props) {
@@ -9,10 +9,7 @@ function Cart(props) {
         <h3>{props.name}</h3>
         <p>{props.price}</p>
       </div>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        impedit maiores modi vel.
-      </p>
+      
       <button onClick={() => {
         props.update(props.price)
       }}>Add to cart</button>

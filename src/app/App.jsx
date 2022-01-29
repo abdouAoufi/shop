@@ -9,13 +9,12 @@ function App() {
   useEffect(() => {
     fetch("http://192.168.1.34:1337/product")
       .then((data) => {
-        data.json().then((list) => {console.log(list)})
+        data.json().then((list) => {
+          setListProduct(list.products);
+        });
       })
-      .catch((error) => console.log("============",error));
+      .catch((error) => console.log("============", error));
   }, []);
-
-
-
 
   const updateTotal = (price) => {
     setTotal(total + price);
@@ -41,7 +40,7 @@ function App() {
                 update={updateTotal}
                 name={item.name}
                 price={item.price}
-                image={item.image}
+                image={item.imgUrl}
               />
             );
           })
