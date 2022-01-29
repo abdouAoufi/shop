@@ -7,6 +7,7 @@ function Navbar(props) {
       <div className="inner-container">
         <h3>Shop</h3>
         <Link to="/signup">Signup</Link>
+        <Link to="/login">Login</Link>
         <p>total price : {props.totalPrice}$ </p>
       </div>
     </nav>

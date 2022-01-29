@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/Navbar";
 import Cart from "../components/Cart/Cart";
-import Signup from "../components/Signup/Signp"
 import { useState, useEffect } from "react";
 
 

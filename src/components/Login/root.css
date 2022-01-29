@@ -1,0 +1,32 @@
+.form {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid #c4c4c4;
+    border-radius: 1rem;
+    margin-top: .5rem;
+}
+
+button {
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem 1.6rem;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(101, 21, 177);
+    margin-top: .5rem;
+}
