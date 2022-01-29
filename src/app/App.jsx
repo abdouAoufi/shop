@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/Navbar";
 import Cart from "../components/Cart/Cart";
-import data from "../constants/data.json";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -8,10 +7,15 @@ function App() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setListProduct(data.list);
-    }, 3000);
+    fetch("http://192.168.1.34:1337/product")
+      .then((data) => {
+        data.json().then((list) => {console.log(list)})
+      })
+      .catch((error) => console.log("============",error));
   }, []);
+
+
+
 
   const updateTotal = (price) => {
     setTotal(total + price);
