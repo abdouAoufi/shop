@@ -1,10 +1,12 @@
 import "./root.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
+  const navigate = useNavigate();
 
   const processData = () => {
     const payload = {
@@ -22,6 +24,11 @@ function Signup() {
       .then((response) => {
         response.json().then((data) => {
           setResponse(data.message)
+          if (response.status === 201) {
+            setTimeout(() => {
+              navigate("/login");
+            }, 1500);
+          }
         });
       })
       .catch((err) => {

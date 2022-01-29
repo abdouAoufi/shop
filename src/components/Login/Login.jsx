@@ -1,7 +1,9 @@
 import "./root.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
@@ -21,7 +23,12 @@ function Login() {
     })
       .then((response) => {
         response.json().then((data) => {
-          setResponse(data.message)
+          setResponse(data.message);
+          if (response.status === 201) {
+            setTimeout(() => {
+              navigate("/");
+            }, 1500);
+          }
         });
       })
       .catch((err) => {
