@@ -1,12 +1,19 @@
 import "./root.css";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState , useEffect } from "react";
+import { useNavigate , Link} from "react-router-dom";
 
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLogged = localStorage.getItem("isLogged");
+    if(isLogged === "true"){
+      navigate("/")
+    }
+  }, []);
 
   const processData = () => {
     const payload = {
@@ -67,6 +74,7 @@ function Signup() {
       <div>
         <p style={{ textAlign: "center" }}>{response}</p>
       </div>
+      <Link to="/login">you can log in your account here</Link>
     </div>
   );
 }

@@ -11,7 +11,7 @@ function Cart(props) {
       </div>
       
       <button onClick={() => {
-        props.update(props.price)
+        props.update(props.price, props.name)
       }}>Add to cart</button>
     </div>
   );
